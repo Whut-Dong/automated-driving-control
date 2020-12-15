@@ -27,8 +27,8 @@ function[xr,yr,thetar,kr]=straight(init_coord,end_coord,init_angle,count)
 delta_x=(end_coord(1)-init_coord(1))/(count-1);
 delta_y=(end_coord(2)-init_coord(2))/(count-1);
 for i=1:count
-    xr(i)=init_coord(1)+delta_x*i;
-    yr(i)=init_coord(2)+delta_y*i;
+    xr(i)=init_coord(1)+delta_x*(i-1);
+    yr(i)=init_coord(2)+delta_y*(i-1);
     thetar(i)=init_angle;
     kr(i)=0;
 end      
